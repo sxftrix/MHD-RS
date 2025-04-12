@@ -1,117 +1,206 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="Site keywords here">
-    <meta name="description" content="">
-    <meta name='copyright' content=''>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Financial Inventory Reports</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial & Inventory Reports</title>
     <link rel="icon" href="mhdrslogo.png">
-
-    <link
-        href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/icofont.css">
-    <link rel="stylesheet" href="css/slicknav.min.css">
-    <link rel="stylesheet" href="css/owl-carousel.css">
-    <link rel="stylesheet" href="css/datepicker.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        iframe {
-            width: 95%;
-            height: 600px;
-            border: 1px solid #ccc;
-            margin-bottom: 20px;
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .header {
+            background-color: #007bff;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header-inner{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img{
+            width: 150px;
+            height: auto;
         }
 
         .container {
-            width: 80%;
+            width: 90%;
             margin: auto;
+            padding: 2rem 0;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        #metabase-iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1rem;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+            border-radius: 5px;
+            left: 0;
+            right: 0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #3498db;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+            border-radius: 3px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f2f2f2;
+            color: #2980b9;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-menu li {
+            margin-right: 20px;
+        }
+
+        .nav-menu li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .nav-menu li a:hover {
+            color: #f1c40f;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 1rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-menu li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+             .dropdown {
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                max-width: 300px;
+            }
+            .dropdown-content {
+                min-width: 100%;
+                left: 0;
+                right: 0;
+            }
         }
     </style>
-
 </head>
-
 <body>
-
     <header class="header">
         <div class="header-inner">
-            <div class="container">
-                <div class="inner">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-12">
-                            <div class="logo">
-                                <a href="index.html"><img src="img/mhdrslogo.png" alt="#" style="width: 150px; height: auto;"></a>
-                            </div>
-                            <div class="mobile-nav"></div>
-                            </div>
-                        <div class="col-lg-7 col-md-9 col-12">
-                            <div class="main-menu">
-                                <nav class="navigation">
-                                    <ul class="nav menu">
-                                        <li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
-                                            <ul class="dropdown">
-                                                <li><a
-                                                        href="https://docs.google.com/document/d/1g_8AP-VqwBpIkIvMrDsvhAMbke2eXT4cQ16rByneIKk/edit?tab=t.0">Documentation</a>
-                                                </li>
-                                                <li><a href="index.html">PDF File</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Dashboards <i class="icofont-rounded-down"></i></a>
-                                            <ul class="dropdown">
-                                                <li><a href="patient_analytics.html">Patient Analytics</a></li>
-                                                <li><a href="doctor_appointments.html">Doctor Appointment Insights</a></li>
-                                                <li><a href="financial_inventory.html">Financial Inventory Reports</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            </div>
-                    </div>
-                </div>
+            <div class="logo">
+                <a href="index.html"><img src="img/mhdrslogo.png" alt="MHDRS Logo"></a>
+            </div>
+            <nav class="navigation">
+                <ul class="nav-menu">
+                    <li class="active"><a href="index.html">Home</a>
+                        <ul class="dropdown-content">
+                            <li><a  href="https://docs.google.com/document/d/1g_8AP-VqwBpIkIvMrDsvhAMbke2eXT4cQ16rByneIKk/edit?tab=t.0">Documentation</a></li>
+                            <li><a href="index.html">PDF File</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Dashboards</a>
+                        <ul class="dropdown-content">
+                            <li><a href="patient_analytics.html">Patient Analytics</a></li>
+                            <li><a href="doctor_appointments.html">Doctor Appointment Insights</a></li>
+                            <li><a href="financial_inventory.html">Financial Inventory Reports</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Financial & Inventory Reports</h1>
+        <div class="dropdown">
+            <label for="financial-reports">Select a Report:</label>
+            <div class="dropdown-content" id="financial-reports">
+                <a data-src="http://localhost:3000/public/question/5fd7d4d8-93eb-4b61-8242-b4fe02e45f7d">Revenue Trends</a>
+                <a data-src="http://localhost:3000/public/question/802942da-f541-4306-b963-e9456c40964c">Outstanding Payments</a>
+                <a data-src="http://localhost:3000/public/question/9ad2812d-1f52-4beb-9f93-86e6500f4e3a">Total Revenue</a>
+                <a data-src="http://localhost:3000/public/question/9a9a1df7-da18-4333-9c29-6bdada44367d">Payment Breakdown by Status</a>
+                <a data-src="http://localhost:3000/public/question/2d38c198-8d98-46a8-b231-3e10e01678c0">Most Paid Patients</a>
+                <a data-src="http://localhost:3000/public/question/a60e16ce-6cb3-458f-a0f7-b1fab7e1cc7a">Revenue Breakdown by Patient</a>
+                <a data-src="http://localhost:3000/public/question/0d7d9fd3-fb30-4c7b-96bf-fae11980ffb8">Total Revenue, Payment Breakdown</a>
+                <a data-src="http://localhost:3000/public/question/7f3fcf6f-e71e-49bb-a197-db56547f01fb">Most Prescribed Medication</a>
+                <a data-src="http://localhost:3000/public/question/9ce4bff8-b275-45c8-9c24-053c1606d1c5">Hospital Expense Report</a>
             </div>
         </div>
-        </header>
-    <div class="container">
-        <h1>Financial Inventory Reports</h1>
-        <iframe src="http://localhost:3000/public/dashboard/d6f5425e-e864-46ef-be4b-4c1d800c1964"></iframe>
+        <iframe id="metabase-iframe" src="http://localhost:3000/public/dashboard/686e4d03-bbb2-4300-9a1b-10807d48152e"></iframe>
     </div>
     <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.0.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/easing.js"></script>
-    <script src="js/colors.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.nav.js"></script>
-    <script src="js/slicknav.min.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/niceselect.js"></script>
-    <script src="js/tilt.jquery.min.js"></script>
-    <script src="js/owl-carousel.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/steller.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+    <script>
+        const metabaseIframe = document.getElementById('metabase-iframe');
+        const reportLinks = document.querySelectorAll('.dropdown-content a');
 
+        reportLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                const reportUrl = this.getAttribute('data-src');
+                metabaseIframe.src = reportUrl;
+            });
+        });
+    </script>
+</body>
 </html>
